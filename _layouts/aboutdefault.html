@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> About... </title>
+        <style>
+          body{
+            background-color: beige;
+          }
+          h2{
+            font-size: 30px;
+            font-family:'Helvetica', sans-serif;
+            text-align:center;
+            padding:25px 50px 25px 50px;
+
+          }
+          p.ex1 {
+            font:17px,Georgia,sans-serif;
+            margin-left:100px; 
+            padding-left:25px; 
+          }
+          em{
+            font: italic Georiga,sans-serif;
+          }
+        </style>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about/index.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      
+      {{ content }}
+    </div>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/weblabtutorial">github.com/weblabtutorial</a></li>
+        <li><a href="https://weblabtutorial.github.io"> weblabtutorial.github.io </a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
