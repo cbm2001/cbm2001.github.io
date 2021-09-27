@@ -2,7 +2,7 @@ body {
   margin: 60px auto;
   width: 70%;
   background-color: beige;
-  background-image:url("/images/birds.png");
+  background-image:url("images/birds.png");
 }
 h1 {
   font-size: 3em;
