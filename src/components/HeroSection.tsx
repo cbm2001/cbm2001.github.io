@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const HeroSection = () => {
@@ -59,34 +59,6 @@ export const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Social Links */}
-          <div
-            className="flex items-center justify-center gap-4 animate-fade-up"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <a
-              href="https://github.com/cbm2001"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
-            >
-              <Github size={20} className="group-hover:scale-110 transition-transform" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/cheryl-biju/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
-            >
-              <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
-            </a>
-            <a
-              href="mailto:cherylbiju26@gmail.com"
-              className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
-            >
-              <Mail size={20} className="group-hover:scale-110 transition-transform" />
-            </a>
-          </div>
         </div>
 
         {/* Scroll indicator */}
