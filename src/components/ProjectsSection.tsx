@@ -112,9 +112,7 @@ export const ProjectsSection = () => {
           <div className="text-center mt-12">
             <Button variant="heroOutline" size="lg" asChild>
               <a
-                href="https://github.com/cbm2001"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/projects"
                 className="flex items-center gap-2"
               >
                 View All Projects
