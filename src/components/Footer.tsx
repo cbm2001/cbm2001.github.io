@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,9 +8,8 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-sm text-primary-foreground/80 flex items-center gap-1">
-            © {currentYear} Cheryl Biju. Made with{" "}
-            <Heart size={14} className="text-accent fill-accent" /> 
+          <p className="text-sm text-primary-foreground/80">
+            © {currentYear} Cheryl Biju.
           </p>
 
           {/* Social Links */}
