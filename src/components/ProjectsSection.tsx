@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Brain, TrendingUp, Activity } from "lucide-react";
+import { ExternalLink, Github, Brain, TrendingUp, Activity, ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 const projects = [
@@ -9,7 +9,6 @@ const projects = [
     tags: ["Python", "NLP", "Deep Learning", "Transformers"],
     icon: Brain,
     github: "https://github.com/cbm2001/Detecting-LLM-Generated-Text",
-    color: "from-blue-500/20 to-purple-500/20",
   },
   {
     title: "Price Optimization",
@@ -18,7 +17,6 @@ const projects = [
     tags: ["Python", "ML", "Optimization", "Analytics"],
     icon: TrendingUp,
     github: "https://github.com/cbm2001/Price-Optimization",
-    color: "from-green-500/20 to-teal-500/20",
   },
   {
     title: "Parkinson's Disease Detection",
@@ -27,7 +25,6 @@ const projects = [
     tags: ["Python", "Healthcare AI", "Classification", "Scikit-learn"],
     icon: Activity,
     github: "https://github.com/cbm2001/Parkinson-s-Disease-Detection",
-    color: "from-rose-500/20 to-orange-500/20",
   },
 ];
 
@@ -52,28 +49,37 @@ export const ProjectsSection = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <div
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <a
                 key={project.title}
-                className="group relative rounded-2xl bg-card shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative rounded-2xl bg-card border border-border hover:border-primary/50 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 overflow-hidden cursor-pointer block"
               >
-                {/* Gradient overlay */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                />
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative p-6 h-full flex flex-col">
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                    <project.icon
-                      size={28}
-                      className="text-accent group-hover:text-accent-foreground transition-colors"
-                    />
+                  {/* Header with icon and arrow */}
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                      <project.icon
+                        size={28}
+                        className="text-accent group-hover:text-accent-foreground transition-colors"
+                      />
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                      <ArrowUpRight
+                        size={18}
+                        className="text-muted-foreground group-hover:text-primary-foreground transition-colors"
+                      />
+                    </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-5 flex-grow leading-relaxed">
@@ -81,33 +87,24 @@ export const ProjectsSection = () => {
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-5">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 text-xs rounded-md bg-secondary/80 text-muted-foreground"
+                        className="px-2.5 py-1 text-xs rounded-md bg-secondary text-muted-foreground"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  {/* Links */}
-                  <div className="flex gap-3">
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        <Github size={16} />
-                        Code
-                      </a>
-                    </Button>
+                  {/* GitHub indicator */}
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                    <Github size={16} />
+                    <span>View on GitHub</span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
