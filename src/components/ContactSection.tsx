@@ -104,10 +104,10 @@ export const ContactSection = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </Reveal>
 
             {/* Contact Form */}
-            <div className="p-8 rounded-2xl bg-card shadow-soft">
+            <Reveal delay={120} className="p-8 md:p-10 rounded-[2.25rem] bg-card-gradient border border-border/70 shadow-soft">
               <h3 className="font-display text-2xl font-semibold text-foreground mb-6">
                 Send a Message
               </h3>
@@ -186,7 +186,7 @@ export const ContactSection = () => {
                   )}
                 </Button>
               </form>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>
