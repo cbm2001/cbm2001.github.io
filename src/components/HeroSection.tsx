@@ -70,7 +70,7 @@ export const HeroSection = () => {
 
             {/* Scroll-revealed stat cards */}
             <div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14"
+              className="hidden md:grid grid-cols-3 gap-4 mt-14"
               style={{ opacity: cardsOpacity, transform: `translateY(${cardsY}px)` }}
             >
               {[
