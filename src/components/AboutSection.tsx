@@ -4,23 +4,23 @@ import { Reveal } from "./Reveal";
 const highlights = [
   {
     icon: Brain,
-    title: "Machine Learning",
-    description: "Expertise in building predictive models and neural networks",
+    title: "Modeling",
+    description: "Forecasting, regression and classification — chosen to fit the question",
   },
   {
     icon: Database,
-    title: "Data Analysis",
-    description: "Transforming raw data into meaningful insights",
+    title: "Data engineering",
+    description: "ETL pipelines and validation checks in Databricks, Python and SQL",
   },
   {
     icon: Code,
-    title: "Software Development",
-    description: "Building scalable applications and APIs",
+    title: "Automation",
+    description: "Internal tools and dashboards people actually use day to day",
   },
   {
     icon: Lightbulb,
-    title: "Problem Solving",
-    description: "Creative solutions to complex challenges",
+    title: "Framing problems",
+    description: "Turning a vague business ask into something measurable",
   },
 ];
 
@@ -33,28 +33,30 @@ export const AboutSection = () => {
           <Reveal className="max-w-2xl mb-16">
             <span className="eyebrow">About me</span>
             <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
-              Design with data.
-              <span className="block italic text-gradient">Stories that scale.</span>
+              A bit about
+              <span className="block italic text-gradient">how I work.</span>
             </h2>
           </Reveal>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <Reveal delay={80} className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                I'm a Data Scientist and Machine Learning Engineer with a strong
-                foundation in developing AI-powered solutions. My journey in tech has been
-                driven by curiosity and a desire to solve meaningful problems.
+                I'm a data scientist finishing a master's in Data Science at the University
+                of Michigan. This summer I'm at Zoox, working on demand forecasting and
+                pricing for autonomous vehicles.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                With expertise in Python, machine learning frameworks, and data analysis tools,
-                I specialize in building end-to-end ML pipelines, from data preprocessing to
-                model deployment. I believe in the power of data to drive decisions and
-                create positive change.
+                Before grad school I spent a year and a half at Emerson, sitting between
+                quality, manufacturing, operations and purchasing teams. Most of my work
+                there was unglamorous and useful: getting messy Oracle data into shape,
+                writing validation checks, and building dashboards that answered the
+                questions people kept asking in meetings.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                When I'm not training models or analyzing datasets, you'll find me exploring
-                new technologies, contributing to open-source projects, and staying updated
-                with the latest advancements in AI research.
+                I like problems where the modeling is only half the job — the rest is
+                figuring out what to measure and making the result easy to act on.
+                Outside of work I'm usually reading, or tinkering with a side project
+                that started as a small question.
               </p>
               <div className="rule mt-10" />
             </Reveal>
