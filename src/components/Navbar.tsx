@@ -26,7 +26,7 @@ export const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg shadow-soft"
+          ? "bg-background/70 backdrop-blur-xl border-b border-border/60"
           : "bg-transparent"
       }`}
     >
@@ -34,7 +34,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
             href="#"
-            className="font-heading text-xl font-bold text-foreground hover:text-accent transition-colors"
+            className="font-display text-2xl tracking-tight text-foreground hover:text-accent transition-colors"
           >
             CB
           </a>
@@ -45,7 +45,7 @@ export const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors"
               >
                 {item.label}
               </a>
@@ -74,7 +74,7 @@ export const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                  className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}

@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Brain, TrendingUp, Activity, ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Reveal } from "./Reveal";
 
 const projects = [
   {
@@ -30,47 +31,46 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 md:py-32 bg-secondary/30">
+    <section id="projects" className="py-24 md:py-36 bg-warm-gradient">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="text-accent font-medium text-sm uppercase tracking-wider">
-              Portfolio
-            </span>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3">
-              Featured
-              <span className="text-gradient"> Projects</span>
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              A selection of projects showcasing my expertise in machine learning, 
-              data science, and software development
+          <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div>
+              <span className="eyebrow">Featured work</span>
+              <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
+                Selected <span className="italic text-gradient">Projects</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground max-w-sm font-light">
+              A selection of work across machine learning, data science and software
+              engineering.
             </p>
-          </div>
+          </Reveal>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, projectIndex) => (
+              <Reveal key={project.title} delay={projectIndex * 130}>
               <a
-                key={project.title}
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative rounded-2xl bg-card border border-border hover:border-primary/50 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 overflow-hidden cursor-pointer block"
+                className="group relative h-full rounded-[2rem] bg-card-gradient border border-border/70 hover:border-accent/40 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 overflow-hidden cursor-pointer block"
               >
                 {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-peach-gradient opacity-0 group-hover:opacity-60 transition-opacity duration-500" />
 
                 <div className="relative p-6 h-full flex flex-col">
                   {/* Header with icon and arrow */}
                   <div className="flex items-start justify-between mb-5">
-                    <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                    <div className="w-14 h-14 rounded-full border border-accent/30 flex items-center justify-center group-hover:bg-accent group-hover:scale-105 transition-all duration-500">
                       <project.icon
                         size={28}
                         className="text-accent group-hover:text-accent-foreground transition-colors"
                       />
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                    <div className="w-10 h-10 rounded-full bg-secondary/70 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
                       <ArrowUpRight
                         size={18}
                         className="text-muted-foreground group-hover:text-primary-foreground transition-colors"
@@ -79,10 +79,10 @@ export const ProjectsSection = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="font-display text-2xl text-foreground mb-3 group-hover:text-accent transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-5 flex-grow leading-relaxed">
+                  <p className="text-muted-foreground text-sm mb-5 flex-grow leading-relaxed font-light">
                     {project.description}
                   </p>
 
@@ -91,7 +91,7 @@ export const ProjectsSection = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 text-xs rounded-md bg-secondary text-muted-foreground"
+                        className="px-3 py-1 text-[0.65rem] uppercase tracking-[0.14em] rounded-full border border-border text-muted-foreground"
                       >
                         {tag}
                       </span>
@@ -105,11 +105,12 @@ export const ProjectsSection = () => {
                   </div>
                 </div>
               </a>
+              </Reveal>
             ))}
           </div>
 
           {/* View More */}
-          <div className="text-center mt-12">
+          <Reveal className="text-center mt-14">
             <Button variant="heroOutline" size="lg" asChild>
               <a
                 href="/projects"
@@ -119,7 +120,7 @@ export const ProjectsSection = () => {
                 <ExternalLink size={18} />
               </a>
             </Button>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
