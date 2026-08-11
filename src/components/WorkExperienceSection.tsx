@@ -3,15 +3,25 @@ import { Reveal } from "./Reveal";
 
 const experiences = [
   {
+    company: "Zoox (Amazon)",
+    role: "Data Science Intern",
+    location: "Foster City, CA",
+    period: "May 2026 - Aug 2026",
+    highlights: [
+      "Framed a demand forecasting problem for autonomous vehicles in Scala and Databricks, comparing a static fallback model against time-series approaches and setting the evaluation criteria the team used to pick one.",
+      "Built a dynamic pricing layer on top of the team's demand models, turning forecasted demand into prices that could run in real time.",
+      "Wrote internal tooling to speed the team up — an automated PR helper and new features for an internal chatbot over our databases.",
+    ],
+  },
+  {
     company: "Emerson",
-    role: "Data Scientist - Analytics & Automation",
+    role: "Data Scientist — Analytics & Automation",
     location: "Dubai, UAE",
     period: "Feb 2024 - Aug 2025",
     highlights: [
-      "Architected agentic AI system for cross-functional analytics to autonomously analyze supplier performance metrics and product defect patterns across quality, manufacturing, operations, and purchasing departments.",
-      "Built conversational supplier intelligence system enabling natural language queries over 50K+ historical RFT/SCAR quality documents; implemented RAG pipeline surfacing relevant past quality issues and anomalies within seconds.",
-      "Developed intelligent procurement optimization system predicting optimal quote pricing with LLM-powered natural language interface, achieving 18% cost savings validated through A/B testing.",
-      "Engineered end-to-end data quality monitoring platform tracking 10K+ monthly manufacturing records from Oracle across calibration testing, maintenance schedules, and production workflows.",
+      "Built an analytics platform in Power BI and DAX that pulled quality, manufacturing, operations and purchasing data together, and defined the supplier metrics behind it. Error identification got about 15% faster.",
+      "Set up data quality monitoring across 10K+ manufacturing records a month from Oracle, using Python and SQL checks, Power Automate for orchestration and PowerApps for the interface.",
+      "Made a supplier lookup tool over historical RFT and SCAR records so purchasing and engineering could see recurring quality patterns by part and supplier.",
     ],
   },
   {
@@ -20,8 +30,8 @@ const experiences = [
     location: "Dubai, UAE",
     period: "Jul 2023 - Aug 2023",
     highlights: [
-      "Participated in full SDLC for in-house asset management applications conducting QA testing with C# and .NET framework, while managing Agile sprint workflows via JIRA.",
-      "Collaborated with project managers to develop Functional Specification Documents (FSDs) translating client requirements into technical specifications, improving delivery efficiency.",
+      "Worked across the SDLC on in-house asset management apps, doing QA testing in C# and .NET and tracking sprints in Jira.",
+      "Wrote functional specification documents with project managers, translating client requests into something engineers could build from.",
     ],
   },
 ];
@@ -33,13 +43,13 @@ export const WorkExperienceSection = () => {
         <div className="max-w-5xl mx-auto">
           <Reveal className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <span className="eyebrow">Career journey</span>
+              <span className="eyebrow">Where I've worked</span>
               <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
                 Work <span className="italic text-gradient">Experience</span>
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm font-light">
-              Two years of shipping analytics and AI systems inside global manufacturing.
+              Forecasting and pricing at Zoox, analytics and automation at Emerson.
             </p>
           </Reveal>
 
