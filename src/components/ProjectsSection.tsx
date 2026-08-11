@@ -4,28 +4,28 @@ import { Reveal } from "./Reveal";
 
 const projects = [
   {
-    title: "Detecting LLM-Generated Text",
+    title: "Healthcare Data Standardization",
     description:
-      "A machine learning system designed to distinguish between human-written and AI-generated text using advanced NLP techniques and deep learning models.",
-    tags: ["Python", "NLP", "Deep Learning", "Transformers"],
-    icon: Brain,
-    github: "https://github.com/cbm2001/Detecting-LLM-Generated-Text",
+      "Worked with a Taiwanese healthcare startup on an LLM-powered pipeline that maps different hospitals' lab terminology onto one shared vocabulary, so the data can actually be compared.",
+    tags: ["Python", "LLMs", "Pipelines", "Healthcare"],
+    icon: Activity,
+    github: "https://github.com/cbm2001",
   },
   {
-    title: "Price Optimization",
+    title: "Podcast Recommendations",
     description:
-      "An intelligent pricing system that uses machine learning algorithms to optimize product pricing strategies based on market dynamics and demand patterns.",
-    tags: ["Python", "ML", "Optimization", "Analytics"],
+      "A hybrid recommender over 1.1M podcast transcripts combining TF-IDF, BERT embeddings and metadata. Compared unsupervised ranking against learning-to-rank; best setup hit nDCG@5 above 0.60.",
+    tags: ["BERT", "TF-IDF", "Learning to Rank"],
+    icon: Brain,
+    github: "https://github.com/cbm2001",
+  },
+  {
+    title: "Dynamic Pricing Engine",
+    description:
+      "A pricing model for ride-sharing and retail using Random Forest and gradient boosting, plus a demand elasticity layer for weather and time. Simulated A/B tests showed an 18% revenue lift.",
+    tags: ["Python", "Ensembles", "A/B Testing"],
     icon: TrendingUp,
     github: "https://github.com/cbm2001/Price-Optimization",
-  },
-  {
-    title: "Parkinson's Disease Detection",
-    description:
-      "A healthcare ML application that predicts Parkinson's disease using biomedical voice measurements and machine learning classification techniques.",
-    tags: ["Python", "Healthcare AI", "Classification", "Scikit-learn"],
-    icon: Activity,
-    github: "https://github.com/cbm2001/Parkinson-s-Disease-Detection",
   },
 ];
 
@@ -37,14 +37,13 @@ export const ProjectsSection = () => {
           {/* Section Header */}
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
-              <span className="eyebrow">Featured work</span>
+              <span className="eyebrow">Recent work</span>
               <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
                 Selected <span className="italic text-gradient">Projects</span>
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm font-light">
-              A selection of work across machine learning, data science and software
-              engineering.
+              A few things I've built recently, mostly out of curiosity.
             </p>
           </Reveal>
 

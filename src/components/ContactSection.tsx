@@ -59,12 +59,12 @@ export const ContactSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <Reveal className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">Let's create</span>
+            <span className="eyebrow">Contact</span>
             <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
-              Something <span className="italic text-gradient">meaningful</span> together
+              Get in <span className="italic text-gradient">touch</span>
             </h2>
             <p className="text-muted-foreground mt-5 font-light">
-              Have a project in mind or just want to say hello? I'd love to hear from you.
+              Working on something interesting, or just want to chat? Send a note.
             </p>
           </Reveal>
 
@@ -73,12 +73,12 @@ export const ContactSection = () => {
             <Reveal className="space-y-8">
               <div>
                 <h3 className="font-display text-3xl text-foreground mb-4">
-                  Contact Information
+                  Where to find me
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Feel free to reach out through any of these channels. I'm always 
-                  open to discussing new projects, creative ideas, or opportunities 
-                  to be part of your vision.
+                  Email is usually fastest, but LinkedIn works too. I'm open to
+                  full-time roles starting mid-2027, and happy to talk about projects
+                  before then.
                 </p>
               </div>
 

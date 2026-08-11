@@ -2,20 +2,20 @@ import { Reveal } from "./Reveal";
 
 const skillCategories = [
   {
-    title: "Programming Languages",
-    skills: ["Python", "R", "SQL", "JavaScript", "TypeScript"],
+    title: "Languages",
+    skills: ["Python", "SQL", "Scala", "R", "Java", "JavaScript"],
   },
   {
     title: "Machine Learning",
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "XGBoost"],
+    skills: ["Scikit-learn", "TensorFlow", "PyTorch", "Keras", "Forecasting", "A/B Testing", "SHAP"],
   },
   {
-    title: "Data Analysis",
-    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Tableau"],
+    title: "Visualization & BI",
+    skills: ["Power BI", "D3.js", "Matplotlib", "Seaborn", "Alteryx", "Grafana"],
   },
   {
-    title: "Tools & Platforms",
-    skills: ["Git", "Docker", "AWS", "Jupyter", "VS Code"],
+    title: "Data & Automation",
+    skills: ["Databricks", "ETL", "Power Automate", "Power Apps", "React", "Firebase"],
   },
 ];
 
@@ -26,12 +26,12 @@ export const SkillsSection = () => {
       <div className="container mx-auto px-6 relative">
         <div className="max-w-6xl mx-auto">
           <Reveal className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow">Expertise</span>
+            <span className="eyebrow">Toolkit</span>
             <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
-              Skills & <span className="italic text-gradient">Technologies</span>
+              Skills & <span className="italic text-gradient">Tools</span>
             </h2>
             <p className="text-muted-foreground mt-5 font-light">
-              A considered toolkit for building intelligent, data-driven products.
+              What I reach for most, roughly in order of how often I use it.
             </p>
           </Reveal>
 

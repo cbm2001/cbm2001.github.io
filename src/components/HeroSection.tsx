@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
 
-const marquee = ["Machine Learning", "Agentic AI", "RAG Pipelines", "Data Storytelling", "MLOps"];
+const marquee = ["Forecasting", "Machine Learning", "Databricks", "Power BI", "Python & SQL"];
 
 export const HeroSection = () => {
   const { ref, progress } = useScrollProgress<HTMLDivElement>();
@@ -52,18 +52,18 @@ export const HeroSection = () => {
               className="mt-8"
             >
               <p className="text-sm md:text-base uppercase tracking-[0.32em] text-muted-foreground">
-                Data Scientist &nbsp;·&nbsp; Machine Learning Engineer
+                Data Scientist &nbsp;·&nbsp; MS Data Science, Michigan
               </p>
               <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
-                Turning complex data into clear, elegant decisions — and building
-                intelligent systems that quietly do the heavy lifting.
+                I build forecasting models, pricing systems and the pipelines that keep
+                them fed. Currently at Zoox, previously at Emerson.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
                 <Button variant="hero" size="lg" asChild>
-                  <a href="#projects">View My Work</a>
+                  <a href="#projects">See my work</a>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <a href="#contact">Contact Me</a>
+                  <a href="#contact">Say hello</a>
                 </Button>
               </div>
             </div>
@@ -74,9 +74,9 @@ export const HeroSection = () => {
               style={{ opacity: cardsOpacity, transform: `translateY(${cardsY}px)` }}
             >
               {[
-                { k: "2+", v: "Years building AI in production" },
-                { k: "50K+", v: "Quality documents made searchable" },
-                { k: "18%", v: "Procurement cost savings delivered" },
+                { k: "18%", v: "Revenue lift from a dynamic pricing engine" },
+                { k: "10K+", v: "Manufacturing records checked every month" },
+                { k: "4", v: "Departments on one analytics platform" },
               ].map((s) => (
                 <div
                   key={s.k}
