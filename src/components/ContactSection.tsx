@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Reveal } from "./Reveal";
 
 const contactLinks = [
   {
@@ -52,28 +53,26 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background">
+    <section id="contact" className="relative py-24 md:py-36 bg-background overflow-hidden">
+      <div className="absolute -right-24 top-0 w-[26rem] h-[26rem] rounded-full blur-3xl bg-accent/10 animate-float pointer-events-none" />
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="text-accent font-medium text-sm uppercase tracking-wider">
-              Get in Touch
-            </span>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3">
-              Let's Work
-              <span className="text-gradient"> Together</span>
+          <Reveal className="text-center max-w-2xl mx-auto mb-16">
+            <span className="eyebrow">Let's create</span>
+            <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
+              Something <span className="italic text-gradient">meaningful</span> together
             </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Have a project in mind or just want to say hello? I'd love to hear from you!
+            <p className="text-muted-foreground mt-5 font-light">
+              Have a project in mind or just want to say hello? I'd love to hear from you.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-10">
             {/* Contact Info */}
-            <div className="space-y-8">
+            <Reveal className="space-y-8">
               <div>
-                <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
+                <h3 className="font-display text-3xl text-foreground mb-4">
                   Contact Information
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -105,11 +104,11 @@ export const ContactSection = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </Reveal>
 
             {/* Contact Form */}
-            <div className="p-8 rounded-2xl bg-card shadow-soft">
-              <h3 className="font-heading text-2xl font-semibold text-foreground mb-6">
+            <Reveal delay={120} className="p-8 md:p-10 rounded-[2.25rem] bg-card-gradient border border-border/70 shadow-soft">
+              <h3 className="font-display text-2xl font-semibold text-foreground mb-6">
                 Send a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -187,7 +186,7 @@ export const ContactSection = () => {
                   )}
                 </Button>
               </form>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>
