@@ -26,13 +26,13 @@ const highlights = [
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="relative py-24 md:py-36 bg-warm-gradient overflow-hidden">
+    <section id="about" className="relative py-20 md:py-28 bg-warm-gradient overflow-hidden">
       <div className="absolute -left-32 top-1/4 w-[26rem] h-[26rem] rounded-full blur-3xl bg-accent/10 animate-float-delayed pointer-events-none" />
       <div className="container mx-auto px-6 relative">
         <div className="max-w-6xl mx-auto">
-          <Reveal className="max-w-2xl mb-16">
+          <Reveal className="max-w-2xl mb-12 md:mb-16">
             <span className="eyebrow">About me</span>
-            <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
+            <h2 className="font-display text-4xl md:text-6xl text-foreground mt-3 md:mt-5 leading-[1.05]">
               A bit about
               <span className="block italic text-gradient">how I work.</span>
             </h2>

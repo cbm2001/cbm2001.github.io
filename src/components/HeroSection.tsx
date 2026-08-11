@@ -9,17 +9,18 @@ export const HeroSection = () => {
 
   // Scroll-driven hero transformation
   const p = progress;
-  const nameScale = 1 - p * 0.28;
+  const nameScale = 1 - p * 0.14;
   const nameY = -p * 60;
-  const introOpacity = Math.max(1 - p * 2.2, 0);
-  const introY = -p * 40;
+  const nameOpacity = Math.max(1 - p * 1.2, 0);
+  const introOpacity = Math.max(1 - p * 1.6, 0);
+  const introY = -p * 42;
   const cardsY = 120 - Math.min(p * 2, 1) * 120;
   const cardsOpacity = Math.min(p * 2.4, 1);
   const glowScale = 1 + p * 0.5;
 
   return (
     <div ref={ref} className="relative h-[220vh]" id="hero">
-      <section className="sticky top-0 h-screen overflow-hidden bg-hero-gradient flex flex-col justify-center">
+      <section className="sticky top-0 h-screen overflow-hidden bg-hero-gradient flex flex-col justify-center pt-20 sm:pt-24 md:pt-28">
         {/* soft warm blooms */}
         <div className="absolute inset-0 pointer-events-none">
           <div
@@ -30,18 +31,15 @@ export const HeroSection = () => {
           <div className="absolute top-1/3 -right-24 w-[30rem] h-[30rem] rounded-full blur-3xl bg-sage/15 animate-float" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-8 sm:pt-10 md:pt-12">
           <div className="max-w-5xl mx-auto text-center">
-            <p
-              className="eyebrow mb-8 animate-fade-in"
-              style={{ opacity: introOpacity, transform: `translateY(${introY}px)` }}
-            >
-              Portfolio — 2026
-            </p>
-
             <h1
-              className="font-display text-6xl sm:text-7xl md:text-[7.5rem] leading-[0.9] text-foreground animate-fade-up"
-              style={{ transform: `translateY(${nameY}px) scale(${nameScale})` }}
+              className="font-display text-[4.1rem] leading-[0.82] sm:text-7xl md:text-[7.5rem] text-foreground animate-fade-up"
+              style={{
+                opacity: nameOpacity,
+                transform: `translateY(${nameY}px) scale(${nameScale})`,
+                willChange: "transform, opacity",
+              }}
             >
               <span className="block italic font-light">Cheryl</span>
               <span className="block text-gradient">Biju</span>
@@ -49,20 +47,20 @@ export const HeroSection = () => {
 
             <div
               style={{ opacity: introOpacity, transform: `translateY(${introY}px)` }}
-              className="mt-8"
+              className="mt-6 sm:mt-8"
             >
-              <p className="text-sm md:text-base uppercase tracking-[0.32em] text-muted-foreground">
+              <p className="text-[0.68rem] sm:text-sm md:text-base uppercase tracking-[0.18em] sm:tracking-[0.32em] text-muted-foreground">
                 Data Scientist &nbsp;·&nbsp; MS Data Science, Michigan
               </p>
-              <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed px-2 sm:px-0">
                 I build forecasting models, pricing systems and the pipelines that keep
                 them fed. Currently at Zoox, previously at Emerson.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-                <Button variant="hero" size="lg" asChild>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 w-full px-2 sm:px-0">
+                <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
                   <a href="#projects">See my work</a>
                 </Button>
-                <Button variant="heroOutline" size="lg" asChild>
+                <Button variant="heroOutline" size="lg" asChild className="w-full sm:w-auto">
                   <a href="#contact">Say hello</a>
                 </Button>
               </div>

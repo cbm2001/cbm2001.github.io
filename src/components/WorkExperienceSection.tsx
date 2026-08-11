@@ -38,13 +38,13 @@ const experiences = [
 
 export const WorkExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 md:py-36 bg-background">
+    <section id="experience" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          <Reveal className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <Reveal className="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <span className="eyebrow">Where I've worked</span>
-              <h2 className="font-display text-4xl md:text-6xl text-foreground mt-5 leading-[1.05]">
+              <h2 className="font-display text-4xl md:text-6xl text-foreground mt-3 md:mt-5 leading-[1.05]">
                 Work <span className="italic text-gradient">Experience</span>
               </h2>
             </div>

@@ -26,26 +26,26 @@ export const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/70 backdrop-blur-xl border-b border-border/60"
-          : "bg-transparent"
+          ? "bg-background/75 backdrop-blur-xl border-b border-border/60 shadow-[0_10px_30px_-18px_rgba(15,23,42,0.15)]"
+          : "bg-background/20 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
             href="#"
-            className="font-display text-2xl tracking-tight text-foreground hover:text-accent transition-colors"
+            className="font-display text-2xl md:text-[2rem] leading-none tracking-tight text-foreground hover:text-accent transition-colors"
           >
             CB
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors"
+                className="text-[0.66rem] lg:text-xs uppercase tracking-[0.18em] lg:tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors"
               >
                 {item.label}
               </a>
@@ -59,7 +59,7 @@ export const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden rounded-full hover:bg-white/20"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -68,23 +68,25 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 animate-fade-up">
-            <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-              <Button variant="accent" asChild>
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  Get in Touch
-                </a>
-              </Button>
+          <div className="md:hidden pb-5 animate-fade-up">
+            <div className="rounded-2xl border border-border/70 bg-background/80 p-4 shadow-soft backdrop-blur-xl">
+              <div className="flex flex-col gap-2">
+                {navItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-[0.68rem] uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors py-2 px-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <Button variant="accent" asChild className="mt-2">
+                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    Get in Touch
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         )}
