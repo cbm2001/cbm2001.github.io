@@ -1,33 +1,9 @@
-import { ExternalLink, Github, Brain, TrendingUp, Activity, ArrowUpRight } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Reveal } from "./Reveal";
+import { projects as allProjects } from "@/data/projects";
 
-const projects = [
-  {
-    title: "Healthcare Data Standardization",
-    description:
-      "Worked with a Taiwanese healthcare startup on an LLM-powered pipeline that maps different hospitals' lab terminology onto one shared vocabulary, so the data can actually be compared.",
-    tags: ["Python", "LLMs", "Pipelines", "Healthcare"],
-    icon: Activity,
-    github: "https://github.com/cbm2001",
-  },
-  {
-    title: "Podcast Recommendations",
-    description:
-      "A hybrid recommender over 1.1M podcast transcripts combining TF-IDF, BERT embeddings and metadata. Compared unsupervised ranking against learning-to-rank; best setup hit nDCG@5 above 0.60.",
-    tags: ["BERT", "TF-IDF", "Learning to Rank"],
-    icon: Brain,
-    github: "https://github.com/cbm2001",
-  },
-  {
-    title: "Dynamic Pricing Engine",
-    description:
-      "A pricing model for ride-sharing and retail using Random Forest and gradient boosting, plus a demand elasticity layer for weather and time. Simulated A/B tests showed an 18% revenue lift.",
-    tags: ["Python", "Ensembles", "A/B Testing"],
-    icon: TrendingUp,
-    github: "https://github.com/cbm2001/Price-Optimization",
-  },
-];
+const projects = allProjects.filter((p) => p.featured);
 
 export const ProjectsSection = () => {
   return (

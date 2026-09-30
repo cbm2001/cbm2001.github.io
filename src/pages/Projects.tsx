@@ -1,67 +1,8 @@
-import { ExternalLink, Github, Brain, TrendingUp, Activity, ArrowUpRight, Database, Code, Cpu, BarChart } from "lucide-react";
+import { Github, ArrowUpRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
-
-const allProjects = [
-  {
-    title: "Detecting LLM-Generated Text",
-    description:
-      "A machine learning system designed to distinguish between human-written and AI-generated text using advanced NLP techniques and deep learning models.",
-    tags: ["Python", "NLP", "Deep Learning", "Transformers"],
-    icon: Brain,
-    github: "https://github.com/cbm2001/Detecting-LLM-Generated-Text",
-  },
-  {
-    title: "Price Optimization",
-    description:
-      "An intelligent pricing system that uses machine learning algorithms to optimize product pricing strategies based on market dynamics and demand patterns.",
-    tags: ["Python", "ML", "Optimization", "Analytics"],
-    icon: TrendingUp,
-    github: "https://github.com/cbm2001/Price-Optimization",
-  },
-  {
-    title: "Parkinson's Disease Detection",
-    description:
-      "A healthcare ML application that predicts Parkinson's disease using biomedical voice measurements and machine learning classification techniques.",
-    tags: ["Python", "Healthcare AI", "Classification", "Scikit-learn"],
-    icon: Activity,
-    github: "https://github.com/cbm2001/Parkinson-s-Disease-Detection",
-  },
-  // Add more projects below - these are placeholders you can customize
-  {
-    title: "Data Pipeline Project",
-    description:
-      "A scalable data pipeline for processing and analyzing large datasets using modern ETL practices and cloud infrastructure.",
-    tags: ["Python", "ETL", "Data Engineering", "Cloud"],
-    icon: Database,
-    github: "https://github.com/cbm2001",
-  },
-  {
-    title: "ML Model Deployment",
-    description:
-      "End-to-end machine learning model deployment with API endpoints, monitoring, and automated retraining capabilities.",
-    tags: ["Python", "MLOps", "Docker", "FastAPI"],
-    icon: Code,
-    github: "https://github.com/cbm2001",
-  },
-  {
-    title: "Neural Network Experiments",
-    description:
-      "A collection of neural network architectures and experiments exploring different deep learning approaches and optimizations.",
-    tags: ["Python", "TensorFlow", "PyTorch", "Research"],
-    icon: Cpu,
-    github: "https://github.com/cbm2001",
-  },
-  {
-    title: "Analytics Dashboard",
-    description:
-      "Interactive data visualization dashboard for business analytics with real-time data updates and customizable charts.",
-    tags: ["Python", "Visualization", "Plotly", "Streamlit"],
-    icon: BarChart,
-    github: "https://github.com/cbm2001",
-  },
-];
+import { projects as allProjects } from "@/data/projects";
 
 const Projects = () => {
   return (
