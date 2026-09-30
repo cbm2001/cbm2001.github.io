@@ -31,8 +31,8 @@ const Projects = () => {
                 <span className="text-gradient"> Projects</span>
               </h1>
               <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                A comprehensive collection of my work in machine learning, 
-                data science, and software development
+                Everything I've built, from school projects to things I made for fun.
+                Each card links to the code on GitHub.
               </p>
             </div>
 
