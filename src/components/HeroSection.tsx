@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
+import { SectionLink } from "./SectionLink";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
 
 export const HeroSection = () => {
@@ -64,10 +65,10 @@ export const HeroSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 w-full px-2 sm:px-0">
                 <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
-                  <a href="#projects">See my work</a>
+                  <SectionLink to="projects">See my work</SectionLink>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild className="w-full sm:w-auto">
-                  <a href="#contact">Say hello</a>
+                  <SectionLink to="contact">Say hello</SectionLink>
                 </Button>
               </div>
             </div>
@@ -98,9 +99,9 @@ export const HeroSection = () => {
           className="absolute bottom-16 left-1/2 -translate-x-1/2 animate-bounce"
           style={{ opacity: contentOpacity }}
         >
-          <a href="#about" aria-label="Scroll to about" className="text-muted-foreground hover:text-accent transition-colors">
+          <SectionLink to="about" aria-label="Scroll to about" className="text-muted-foreground hover:text-accent transition-colors">
             <ArrowDown size={20} />
-          </a>
+          </SectionLink>
         </div>
       </section>
     </div>

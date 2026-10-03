@@ -1,4 +1,5 @@
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Reveal } from "./Reveal";
 import { projects as allProjects } from "@/data/projects";
@@ -87,13 +88,13 @@ export const ProjectsSection = () => {
           {/* View More */}
           <Reveal className="text-center mt-14">
             <Button variant="heroOutline" size="lg" asChild>
-              <a
-                href="/projects"
+              <Link
+                to="/projects"
                 className="flex items-center gap-2"
               >
                 View All Projects
                 <ExternalLink size={18} />
-              </a>
+              </Link>
             </Button>
           </Reveal>
         </div>

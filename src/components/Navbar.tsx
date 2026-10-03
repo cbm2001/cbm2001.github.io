@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { SectionLink } from "./SectionLink";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "about" },
+  { label: "Experience", href: "experience" },
+  { label: "Skills", href: "skills" },
+  { label: "Projects", href: "projects" },
+  { label: "Contact", href: "contact" },
 ];
 
 export const Navbar = () => {
@@ -32,26 +33,26 @@ export const Navbar = () => {
     >
       <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a
-            href="#"
+          <SectionLink
+            to=""
             className="font-display text-2xl md:text-[2rem] leading-none tracking-tight text-foreground hover:text-accent transition-colors"
           >
             CB
-          </a>
+          </SectionLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navItems.map((item) => (
-              <a
+              <SectionLink
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="text-[0.66rem] lg:text-xs uppercase tracking-[0.18em] lg:tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors"
               >
                 {item.label}
-              </a>
+              </SectionLink>
             ))}
             <Button variant="accent" size="sm" asChild>
-              <a href="#contact">Get in Touch</a>
+              <SectionLink to="contact">Get in Touch</SectionLink>
             </Button>
           </div>
 
@@ -72,19 +73,19 @@ export const Navbar = () => {
             <div className="rounded-2xl border border-border/70 bg-background/80 p-4 shadow-soft backdrop-blur-xl">
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
-                  <a
+                  <SectionLink
                     key={item.label}
-                    href={item.href}
+                    to={item.href}
                     className="text-[0.68rem] uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors py-2 px-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </SectionLink>
                 ))}
                 <Button variant="accent" asChild className="mt-2">
-                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <SectionLink to="contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Get in Touch
-                  </a>
+                  </SectionLink>
                 </Button>
               </div>
             </div>
